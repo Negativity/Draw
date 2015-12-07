@@ -77,23 +77,4 @@
       </block>
     </next>
   </block>
-  <block type="movement_forward" id="71" x="97" y="98">
-    <next>
-      <block type="controls_if" id="84" inline="false">
-        <mutation elseif="1" else="1"></mutation>
-        <next>
-          <block type="robot_delay" id="143" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="150">
-                <field name="NUM">5000</field>
-              </block>
-            </value>
-          </block>
-        </next>
-      </block>
-    </next>
-  </block>
-  <block type="sensor_object" id="106" x="193" y="168">
-    <field name="OBJECT">RIGHTFRONT</field>
-  </block>
 </xml>
