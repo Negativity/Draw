@@ -1,31 +1,52 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_reverse" id="61" x="-33" y="-3">
+  <block type="movement_forward" id="71" x="-86" y="170">
     <next>
-      <block type="robot_delay" id="2" inline="true">
-        <value name="DELAY">
-          <block type="math_number" id="3">
-            <field name="NUM">2000</field>
+      <block type="controls_if" id="84" inline="false">
+        <mutation elseif="1"></mutation>
+        <value name="IF0">
+          <block type="sensor_object" id="91">
+            <field name="OBJECT">LEFTFRONT</field>
           </block>
         </value>
+        <statement name="DO0">
+          <block type="movement_right" id="116"></block>
+        </statement>
+        <value name="IF1">
+          <block type="sensor_object" id="106">
+            <field name="OBJECT">RIGHTFRONT</field>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="movement_left" id="141"></block>
+        </statement>
         <next>
-          <block type="movement_stop" id="21">
+          <block type="robot_delay" id="143" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="150">
+                <field name="NUM">5000</field>
+              </block>
+            </value>
             <next>
-              <block type="oled_cleardisplay" id="30">
+              <block type="movement_stop" id="21">
                 <next>
-                  <block type="oled_setcursor" id="48" inline="true">
-                    <value name="STARTX">
-                      <block type="math_number" id="50">
-                        <field name="NUM">0</field>
-                      </block>
-                    </value>
-                    <value name="STARTY">
-                      <block type="math_number" id="51">
-                        <field name="NUM">0</field>
-                      </block>
-                    </value>
+                  <block type="oled_cleardisplay" id="30">
                     <next>
-                      <block type="oled_drawtext" id="39">
-                        <field name="TEXT">Hello Emily.</field>
+                      <block type="oled_setcursor" id="48" inline="true">
+                        <value name="STARTX">
+                          <block type="math_number" id="50">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                        <value name="STARTY">
+                          <block type="math_number" id="51">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="oled_drawtext" id="39">
+                            <field name="TEXT">Hello Emily.</field>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
