@@ -3,7 +3,7 @@
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
       <block type="sensor_button" id="198">
-        <field name="OBJECT">UP</field>
+        <field name="OBJECT">ENTER</field>
       </block>
     </value>
     <statement name="DO">
@@ -25,7 +25,17 @@
           </block>
         </value>
         <statement name="DO0">
-          <block type="movement_right" id="116"></block>
+          <block type="led_select" id="251" inline="true">
+            <field name="ACTION">FLASH</field>
+            <value name="LED">
+              <block type="math_number" id="252">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <next>
+              <block type="movement_right" id="116"></block>
+            </next>
+          </block>
         </statement>
         <value name="IF1">
           <block type="logic_compare" id="219" inline="true">
@@ -66,7 +76,7 @@
             </value>
             <next>
               <block type="oled_drawtext" id="39">
-                <field name="TEXT">I am the messenger</field>
+                <field name="TEXT">lalala u </field>
                 <next>
                   <block type="movement_stop" id="21"></block>
                 </next>
