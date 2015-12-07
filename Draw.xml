@@ -51,24 +51,33 @@
       </block>
     </statement>
     <next>
-      <block type="oled_cleardisplay" id="30">
+      <block type="robot_delay" id="223" inline="true">
+        <value name="DELAY">
+          <block type="math_number" id="224">
+            <field name="NUM">5000</field>
+          </block>
+        </value>
         <next>
-          <block type="oled_setcursor" id="48" inline="true">
-            <value name="STARTX">
-              <block type="math_number" id="50">
-                <field name="NUM">0</field>
-              </block>
-            </value>
-            <value name="STARTY">
-              <block type="math_number" id="51">
-                <field name="NUM">0</field>
-              </block>
-            </value>
+          <block type="oled_cleardisplay" id="30">
             <next>
-              <block type="oled_drawtext" id="39">
-                <field name="TEXT">hello! I m Lapooshi)</field>
+              <block type="oled_setcursor" id="48" inline="true">
+                <value name="STARTX">
+                  <block type="math_number" id="50">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <value name="STARTY">
+                  <block type="math_number" id="51">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
                 <next>
-                  <block type="movement_stop" id="21"></block>
+                  <block type="oled_drawtext" id="39">
+                    <field name="TEXT">hello! I m Lapooshi)</field>
+                    <next>
+                      <block type="movement_stop" id="21"></block>
+                    </next>
+                  </block>
                 </next>
               </block>
             </next>
